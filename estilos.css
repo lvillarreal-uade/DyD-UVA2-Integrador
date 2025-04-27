@@ -1,0 +1,241 @@
+/* Redefino mi color primario de Boostrap */
+.bg-primary {
+    background-color: #198754 !important;
+}
+
+/* Fondo de todas las páginas */
+body {
+    background-color: #EBEBEB;
+}
+
+/* Alineo los links activos del navbar */
+.navbar-nav {
+    display: flex; 
+    align-items: center; 
+}
+
+/* Modifico el link activo del navbar */
+.nav-link.active {
+    font-weight: bold;
+    color: #198754 !important; 
+    background-color: rgb(255, 255, 255);
+    border-radius: 25px;
+    padding: 2px 6px;
+}
+
+/* Abro el listado de materias del navbar solo cuando apoyo el mouse */
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Estilo para los H */
+h1 {
+    font-size: 2rem; 
+    font-weight: bold;
+    color: #198754;
+    text-align: center; 
+    margin-top: 10px;
+    margin-bottom: 15px; 
+}
+
+h2{
+    font-size: 1.5rem;
+}
+
+/* Estilo para las tablas */
+.table {
+    width: 100%;
+    border-spacing: 0px;
+    border-collapse: separate;
+    background-color: #ffffff;
+}
+
+/* Estilo para las celdas de las tablas */
+.table th, .table td {
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px;
+}
+
+/* Estilo para los encabezados de la tabla */
+.table th {
+    background-color: #198754; 
+    color: white;
+    padding: 5px;
+}
+
+.table-responsive {
+    overflow-x: auto; 
+    -webkit-overflow-scrolling: touch;
+    border-radius: 10px;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilo para las cards */
+.card {
+    width: 95%; 
+    max-width: 600px; 
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+}
+
+.card-body {
+    padding: 15px 10px;
+}
+
+.card ul li {
+    border-bottom: 1px solid #EBEBEB;
+    padding: 5px 0px;
+}
+
+.card ul li:last-child {
+    border-bottom: none; 
+}
+
+/* Estilo para el sobre mi */
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 100%;
+    width: 800px;
+    margin: 0 auto;
+}
+
+/* Estilo para la foto */
+.image-container {
+    flex: 1;
+    max-width: 500px;
+    width: 100%;
+    position: relative;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.image-container::before {
+    content: "";
+    display: block;
+    padding-bottom: 100%; 
+}
+
+.image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+/* Contenedor de texto */
+.text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+}
+
+.text-container h2 {
+    margin: 0;
+    font-size: 1.8rem; 
+}
+
+.text-container p {
+    margin: 0;
+    font-size: 1.1rem; 
+}
+
+.text-container p + p {
+    margin-top: 5px;  
+}
+
+/* Estilo del grid de materia */
+.parent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: repeat(2, 1fr); 
+    grid-gap: 25px; 
+    justify-items: stretch; 
+}
+
+/* Caja Fechas de exámenes */
+.div1 { 
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+/* Caja Bibliografía */
+.div2 {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+/* Caja Actividades UVAs */
+.div3 {
+    grid-area: 1 / 2 / 3 / 3;
+}
+
+.div1, .div2, .div3 {
+    background-color: #ffffff; 
+    border-radius: 10px; 
+    padding: 20px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 600px) {
+    .about-container {
+        flex-direction: column; 
+        width: 100%;  
+    }
+    .image-container {
+        max-width: 100%; 
+    }
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilos del footer */
+.footer {
+    background-color: #198754;
+    color: white;
+    text-align: center;
+    padding: 8px 8px;
+    font-size: 0.9rem;
+}
+
+/* Ajuste específico de los tamaños para pantallas chicas */
+@media (max-width: 400px) {
+    
+    * {
+        font-size: 0.90rem;
+    }
+    
+    .card {
+        width:95%;
+    }
+    
+    .parent {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+        }
+        
+    .div1 { grid-area: 1 / 1 / 2 / 2; }
+    .div2 { grid-area: 2 / 1 / 3 / 2; }
+    .div3 { grid-area: 3 / 1 / 4 / 2; }
+}
