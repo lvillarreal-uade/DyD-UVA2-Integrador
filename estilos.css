@@ -209,6 +209,7 @@ body {
 
 /* Estilos del footer */
 .footer {
+    margin-top: 25px;
     background-color: #198754;
     color: white;
     text-align: center;
